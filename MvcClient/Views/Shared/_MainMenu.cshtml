@@ -1,0 +1,118 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<ul class="sidebar-menu" data-widget="tree">
+    <li class="header SemiBold" style="color:#DCDCDC; font-size: 16px !important">MENU</li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-calendar-check-o"></i> <span style="color:#DCDCDC !important">Controle de Frequencia</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="/RegistroPonto/Index"><i class="fa fa-circle-o" style="color:#DCDCDC !important"></i>Registro de Ponto</a></li>
+            <li><a href="/ConsultaBancoHoras/Index"><i class="fa fa-circle-o" style="color:#DCDCDC !important"></i>Consulta Banco de Horas</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-calculator"></i> <span style="color:#DCDCDC !important">Folha de Pagamento</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="/DemonstrativoPagamento/Index"><i class="fa fa-circle-o" style="color:#DCDCDC !important"></i>Demonstrativo de Pagamento</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-users"></i> <span style="color:#DCDCDC !important">Gestão</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="/GestaoTrabalhoRemoto/Index"><i class="fa fa-circle-o" style="color:#DCDCDC !important"></i>Gestão de Trabalho Remoto</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-stethoscope"></i> <span style="color:#DCDCDC !important">Medicina do Trabalho</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-gears"></i> <span style="color:#DCDCDC !important">Cadastros</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" id="menuAreaMedicaCadastros"></ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-gears"></i> <span style="color:#DCDCDC !important">Agendamentos</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" id="menuAreaMedicaAgendamentos"></ul>
+            </li>
+        </ul>
+    </li>
+    @if (@Context.Session.GetString("AdminRH") == "True")
+    {
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-lock"></i> <span style="color:#DCDCDC !important">Admin</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/Desbloqueio/Index"><i class="fa fa-circle-o" style="color:#DCDCDC !important"></i>Desbloqueio de usuários</a></li>
+            </ul>
+        </li>
+    }
+</ul>
+<script>    
+    if (sessionStorage.getItem('userAreaMedica') === 'BBBEC7C3C8C3CDCECCBBBEC9CC') {
+
+        $('#menuAreaMedicaCadastros').html(
+            '<li><a href="/Area/Index"><i class="fa fa-circle-o"></i>Área</a></li>' +
+            '<li><a href="/CentroCusto/Index"><i class="fa fa-circle-o"></i>Centro de Custo</a></li>' +
+            '<li><a href="/Filial/Index"><i class="fa fa-circle-o"></i>Filial</a></li>' +
+            '<li><a href="/Gestor/Index"><i class="fa fa-circle-o"></i>Gestor x Centro de Custo</a></li>' +
+            '<li><a href="/GrupoUsuario/Index"><i class="fa fa-circle-o"></i>Grupo Permissão Usuário</a></li>' +
+            '<li><a href="/Local/Index"><i class="fa fa-circle-o"></i>Local</a></li>' +
+            '<li><a href="/Procedimento/Index"><i class="fa fa-circle-o"></i>Procedimento</a></li>' +
+            '<li><a href="/Profissional/Index"><i class="fa fa-circle-o"></i>Profissional</a></li>' +
+            '<li><a href="/Situacao/Index"><i class="fa fa-circle-o"></i>Situação do Agendamento</a></li>' +
+            '<li><a href="/Tipo/Index"><i class="fa fa-circle-o"></i>Tipo de Atendimento</a></li>' +
+            '<li><a href="/Turno/Index"><i class="fa fa-circle-o"></i>Turno</a></li>' +
+            '<li><a href="/UsuarioPermissao/Index"><i class="fa fa-circle-o"></i>Usuário Permissão</a></li>'
+        );
+
+        $('#menuAreaMedicaAgendamentos').html(
+            '<li><a href="/Atendimento/Index"><i class="fa fa-circle-o"></i>Controle de Atendimento</a></li>' +
+            '<li><a href="/ConsultaAtendimento/Index"><i class="fa fa-circle-o"></i>Consulta de Atendimento</a></li>' +
+            '<li><a href="/Agendamento/Index"><i class="fa fa-circle-o"></i>Importação da Agenda</a></li>' +
+            '<li><a href="/Programacao/Index"><i class="fa fa-circle-o"></i>Programação de Exames</a></li>'
+        );
+    } else if (sessionStorage.getItem('userAreaMedica') === 'BBCEBFC8BEBFC8CEBF') {
+        $('#menuAreaMedicaAgendamentos').html(
+            '<li><a href="/Atendimento/Index"><i class="fa fa-circle-o"></i>Controle de Atendimento</a></li>' +
+            '<li><a href="/ConsultaAtendimento/Index"><i class="fa fa-circle-o"></i>Consulta de Atendimento</a></li>' +
+            '<li><a href="/Agendamento/Index"><i class="fa fa-circle-o"></i>Importação da Agenda</a></li>' +
+            '<li><a href="/Programacao/Index"><i class="fa fa-circle-o"></i>Programação de Exames</a></li>'
+        );
+    } else {
+        $('#menuAreaMedicaAgendamentos').html(
+            '<li><a href="/Atendimento/Index"><i class="fa fa-circle-o"></i>Controle de Atendimento</a></li>'
+        );
+    }
+</script>

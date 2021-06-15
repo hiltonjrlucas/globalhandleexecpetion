@@ -1,0 +1,91 @@
+﻿<div id="modalDetalhePagamento" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetalhePagamento" aria-hidden="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Detalhamento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box box-widget">
+                    <div class="box-header with-border">
+                        <h3 class="box-title" id="h3Resumo"></h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body" style="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-blue"><i class="fa fa-usd"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Salário Base</span>
+                                        <span class="info-box-number" id="spanSalarioBase"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-blue"><i class="fa fa-usd"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total de Proventos</span>
+                                        <span class="info-box-number" id="spanTotalProventos"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-roxo"><i class="fa fa-usd"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total de Descontos</span>
+                                        <span class="info-box-number" id="spanTotalDescontos"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-green"><i class="fa fa-usd"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">FGTS</span>
+                                        <span class="info-box-number" id="spanFGTS"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-green"><i class="fa fa-usd"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Salário Líquido</span>
+                                        <span class="info-box-number" id="spanSalarioLiquido"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grdDetalhamento"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">
+                    <i class="fa fa-arrow-left"></i>&nbsp;Voltar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

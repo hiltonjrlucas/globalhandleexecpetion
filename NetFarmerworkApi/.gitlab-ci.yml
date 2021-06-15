@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build_release_job:
+  stage: build
+  only:
+    - /^release/.*$/
+  allow_failure: false  
+  script:
+    - '& "$env:PATH_updateScripts"'
+    - '& "$env:PATH_listTasksInReleaseBranch"'
+    - '& "$env:PATH_MSBuildAspNetMvc" -ProjetoTarget "API" -NomeSite "appserverapitst.vicunha.com.br"'

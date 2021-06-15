@@ -1,0 +1,80 @@
+﻿<div id="modalDetalheBancoHoras" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalDetalheBancoHoras" aria-hidden="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Detalhamento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box box-widget">
+                    <div class="box-header with-border">
+                        <h3 class="box-title" id="h3Resumo"></h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-green"><i class="fa fa-clock-o"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Horas Positivas</span>
+                                        <span class="info-box-number" id="spanPositivoMes"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-red"><i class="fa fa-clock-o"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Horas Negativas</span>
+                                        <span class="info-box-number" id="spanNegativoMes"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-box info-vicunha-box">
+                                    <span class="info-box-icon info-vicunha-box-icon bg-vicunha-blue"><i class="fa fa-clock-o"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Saldo do Mês</span>
+                                        <span class="info-box-number" id="spanSaldoMes"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-widget">
+                            <div class="box-body">
+                                <div id="grdLancamentos"></div>
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-12" style="padding: .5em 1em;">
+                                        <span>Os valores exibidos acima serão sempre os <strong>Ano de Referência</strong> selecionado, o período mensal inicia-se no <strong>dia 16</strong> e termina no <strong>dia 15</strong> do mês seguinte.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">
+                    <i class="fa fa-arrow-left"></i>&nbsp;Voltar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

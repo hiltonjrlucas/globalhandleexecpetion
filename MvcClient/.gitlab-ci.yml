@@ -1,0 +1,14 @@
+stages:
+  - build
+
+build_job:
+  stage: build
+  variables:
+    ErrorActionPreference: stop
+  only:
+    - /^release/.*$/
+  allow_failure: false  
+  script:
+    - '& "$env:PATH_updateScripts"'
+    - '& "$env:PATH_listTasksInReleaseBranch"'
+    - '& "$env:PATH_MSBuildAspNetMvc" -ProjetoTarget "VicPortalRH" -PublishProfile "CiWebTST" -NomeSite "portalrhtst.vicunha.com" -TargetFramework "NETCORE"'

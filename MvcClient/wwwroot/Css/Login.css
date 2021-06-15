@@ -1,0 +1,182 @@
+﻿html, body {
+    height: 100vh !important;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    background-color: #333333;
+    justify-content: center;
+    width: 100%;
+    height: 30rem;
+}
+
+main {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #808080;
+}
+
+    main img {
+        margin-top: -6rem !important;
+    }
+
+    main .login-container {
+        width: 90%;
+        max-width: 500px;
+        margin: 4rem auto !important;
+    }
+
+.login-container {
+    display: flex;
+    padding: 2rem !important;
+    flex-direction: column;
+    background-color: #FDFDFD;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+
+.login-btn {
+    margin-top: 1.2em;
+    padding: .3em;
+    font-weight: bold;
+    font-size: medium;
+    /*animation: login 120s infinite;*/
+}
+
+
+footer {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+}
+
+    footer .ribbon {
+        height: 2rem;
+        display: flex;
+        flex: 0.2;
+    }
+
+        footer .ribbon div {
+            flex: 1;
+        }
+
+    footer .info {
+        padding: 1em 1.5em 1em 1.5em
+    }
+
+.ribbon div.blue-bar {
+    background-color: #0055B8;
+}
+
+.ribbon div.yellow-bar {
+    background-color: #F5CE3E;
+}
+
+.ribbon div.green-bar {
+    background-color: #6ABF4B;
+}
+
+.ribbon div.orange-bar {
+    background-color: #FF9300;
+}
+
+.ribbon div.light-blue-bar {
+    background-color: #87D1E6;
+}
+
+.ribbon div.purple-bar {
+    background-color: #773DBD;
+}
+
+@keyframes login {
+    0% {
+        background-color: #0055B8;
+    }
+
+    16.6% {
+        background-color: #F5CE3E;
+    }
+
+    33.2% {
+        background-color: #6ABF4B;
+    }
+
+    49.8% {
+        background-color: #FF9300;
+    }
+
+    66.4% {
+        background-color: #87D1E6;
+    }
+
+    83% {
+        background-color: #773DBD;
+    }
+
+    100% {
+        background-color: #0055B8;
+    }
+}
+
+@media (max-width: 620px) {
+    footer .info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+        footer .info div:first-child {
+            margin-top: 1rem;
+        }
+
+        footer .info div + div {
+            text-align: center;
+        }
+}
+
+.parent {
+    margin: 0;
+    font-size: 0;
+}
+
+    .parent div {
+        display: inline-block;
+        width: 50%;
+        font-size: 14px;
+    }
+
+.left {
+}
+
+.right {
+}
+
+#div2 {
+    background-color: #808080;
+    display: flex;
+    flex: 5;
+    justify-content: center;
+}
+
+    #div2 > #divLogin {
+        display: flex;
+        width: 40em;
+        height: 34em;
+        flex-direction: column;
+        margin-top: -15em;
+        align-items: center;
+    }

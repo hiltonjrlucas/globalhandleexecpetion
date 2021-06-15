@@ -1,0 +1,200 @@
+﻿<form id="frmFormacao">
+    <div class="box box-widget collapsed-box">
+        <div class="box-header with-border">
+            <h3 class="box-title" onclick="Next('btnFA', 'btnIG')">Formação Acadêmica</h3>
+            <div class="box-tools pull-right">
+                <button id="btnFA" type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Grau de Instrução</label>
+                        <div id="slbGrauInstrucao"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-widget">
+                        <div class="box-header with-border">
+                            <span class="box-title" onclick="$('#btnCForm').click()">Cursos de Formação</span>
+                            <div class="box-tools pull-right">
+                                <button id="btnCForm" type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Formação</label>
+                                        <div id="slbFormacaoCurso"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Descrição do Curso</label>
+                                        <div id="txtDescricaoCurso"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Instituição</label>
+                                        <div id="txtInstituicaoCurso"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Conclusão/Ano</label>
+                                        <div id="slbAnoConclusaoCurso"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>&nbsp;</label>
+                                        <div>
+                                            <div id="btnAddFormacao"></div>
+                                            <div id="btnUpdFormacao"></div>
+                                            <div id="btnDelFormacao"></div>
+                                            <input type="hidden" id="hiddenCursoKey" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="grdCurso"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-widget">
+                        <div class="box-header with-border">
+                            <span class="box-title" onclick="$('#btnIdioma').click()">Cursos de Idiomas</span>
+                            <div class="box-tools pull-right">
+                                <button id="btnIdioma" type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Idioma</label>
+                                        <div id="slbIdioma"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Fluência</label>
+                                        <div id="slbFluenciaIdioma"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Descrição</label>
+                                        <div id="txtDescricaoIdioma"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Instiuição</label>
+                                        <div id="txtInstituicaoIdioma"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Conclusão/Ano</label>
+                                        <div id="slbAnoConclusaoIdioma"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>&nbsp;</label>
+                                        <div>
+                                            <div id="btnAddIdioma"></div>
+                                            <div id="btnUpdIdioma"></div>
+                                            <div id="btnDelIdioma"></div>
+                                            <input type="hidden" id="hiddenIdiomaKey" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="grdIdioma"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-widget">
+                        <div class="box-header with-border">
+                            <span class="box-title" onclick="$('#btnECurricular').click()">Cursos Extra Curriculares</span>
+                            <div class="box-tools pull-right">
+                                <button id="btnECurricular" type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Descrição do Curso</label>
+                                        <div id="txtExtraCurricular"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Instituição</label>
+                                        <div id="txtInstituicaoExtra"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Conclusão/Ano</label>
+                                        <div id="slbAnoConclusaoExtra"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>&nbsp;</label>
+                                        <div>
+                                            <div id="btnAddExtra"></div>
+                                            <div id="btnUpdExtra"></div>
+                                            <div id="btnDelExtra"></div>
+                                            <input type="hidden" id="hiddenExtraKey" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="grdExtra"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div id="divFormacaoValidacoes"></div>
+            <div id="btnFormacao" class="pull-right"></div>
+        </div>
+    </div>
+</form>

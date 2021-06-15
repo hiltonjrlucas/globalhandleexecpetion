@@ -1,0 +1,51 @@
+﻿<div style="height: 1360px">
+    <div class="row" style="margin-bottom: 3em">
+        <div class="col-md-3">
+            <img src="{uri}/Images/logo-vicunha-lg.png" alt="Vicunha" width="100" />
+        </div>
+        <div class="col-md-9">
+            <h3 class="modal-title">Demonstrativos de Pagamento</h3>
+        </div>
+    </div>
+    <div class="row">
+        <label>Referência: </label>
+        <span>{spanReferenciaPdf}</span>
+
+        <label>Funcionário: </label>
+        <span>{spanFuncionarioPdf}</span>
+        <label>Função: </label>
+        <span>{spanFuncaoPdf}</span>
+    </div>
+    <div class="row">
+        <label>Salário Base:</label>
+        <span>{spanSalarioBasePdf}</span>
+        <label>Total Proventos: </label>
+        <span>{spanProventosPdf}</span>
+        <label>Total Descontos: </label>
+        <span>{spanDescontosPdf}</span>
+    </div>
+    <div class="row">
+        <label>FGTS: </label>
+        <span>{spanFgtsPdf}</span>
+        <label>Salário Líquido: </label>
+        <span>{spanSalarioLiquidoPdf}</span>
+    </div>
+    <div class="row" style="margin-top: 1em">
+        <div class="col-md-12">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Descrição</th>
+                        <th class="center">Base</th>
+                        <th class="right">Quantidade</th>
+                        <th class="right">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tbody}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

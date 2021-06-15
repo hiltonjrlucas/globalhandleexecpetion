@@ -1,0 +1,78 @@
+﻿@using VicPortalRH.Services
+
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment henv
+@inject VersionService Version
+
+@{
+    ViewData["Title"] = "Cadastro de Gestor e Centro de Custo";
+}
+
+@if (henv.EnvironmentName == "Development")
+{
+    <script src="~/Scripts/Views/Gestor.js?"></script>
+}
+else
+{
+    <script src="~/Bundle/js/Gestor.min.js?@Version.GetVersion()"></script>
+}
+
+<section class="content">
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Cadastro de Gestor e Centro de Custo</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row form-group">
+                                <div class="col-md-3">
+                                    <label>Filial</label>
+                                    <div id="slbFilial"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <label>Gestor</label>
+                                    <div id="slbGestor"></div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label>Centro de Custo</label>
+                                    <div id="slbCentroCusto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="btnCancelar"></div>
+                                    <div id="btnSalvar" class="pull-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="grdGestores" class="form-group"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

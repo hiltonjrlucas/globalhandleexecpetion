@@ -1,0 +1,85 @@
+﻿@using VicPortalRH.Services
+
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment henv
+@inject VersionService Version
+
+@{
+    ViewData["Title"] = "Demonstrativo de Pagamento";
+}
+
+@if (henv.EnvironmentName == "Development")
+{
+    <script src="~/Scripts/Views/DemonstrativoPagamento.js?"></script>
+}
+else
+{
+    <script src="~/Bundle/js/DemonstrativoPagamento.min.js?@Version.GetVersion()"></script>
+}
+
+<section class="content">
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title SemiBold">Demonstrativo de Pagamento</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Mês/Ano de referência: </label>
+                        <div id="dtbAnoMes"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Tipo de Folha: </label>
+                        <div id="slbTipoFolha"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label>Exportar tudo</label>
+                            <div class="form-inline">
+                                <div id="btnExportPdf"></div>
+                                <div id="btnExportExcel"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-widget">
+                        <div class="box-header with-border">
+                            <h3 class="box-title SemiBold" id="description"></h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                        title="Collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row" id="divDemonstrativos"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-md-12" style="padding: .5em 1em;">
+                    <span>O Demonstrativo de Pagamento é gerado com base no período(mês/ano) selecionado, exibindo os <strong>últimos 6 meses</strong>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("_Detalhes")
+</section>

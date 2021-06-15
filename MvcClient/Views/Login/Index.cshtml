@@ -1,0 +1,119 @@
+﻿@using VicPortalRH.Services
+
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment henv
+@inject VersionService Version
+
+@{
+    Layout = "";
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - Vicunha Textil®</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <link rel="apple-touch-icon" href="~/favicon.ico">
+
+    <link href="~/AdminLTE-2.4.18/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/AdminLTE-2.4.18/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/AdminLTE-2.4.18/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/AdminLTE-2.4.18/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/AdminLTE-2.4.18/dist/css/skins/skin-blue.min.css" rel="stylesheet" />
+
+    <!-- CSS Import -->
+    <link href="~/Css/Rawson/Rawson.css" rel="stylesheet" />
+    <link href="~/Css/Site.css" rel="stylesheet" />
+    <link href="~/Css/Vicunha.css" rel="stylesheet" />
+    <link href="~/DevExtreme/dx.common.css" rel="stylesheet" />
+    <link href="~/DevExtreme/dx.light.css" rel="stylesheet" />
+
+    <script src="~/Bundle/js/site.min.js"></script>
+    <script src="~/Bundle/js/DevExtreme.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" media="screen" href="~/Css/Login.css" />
+
+    @if (henv.EnvironmentName == "Development")
+    {
+        <script src="~/Scripts/Views/Login.js"></script>
+        <script src="~/Scripts/Vicunha/Global.js"></script>
+        <script src="~/Scripts/Vicunha/GlobalServices.js"></script>
+        <script src="~/Scripts/Vicunha/GlobalDevExtremeCommon.js"></script>
+        <script src="~/Scripts/Lib/Moment/moment-with-locales.js"></script>
+    }
+    else
+    {
+        <script src="~/Bundle/js/Login.min.js?@Version.GetVersion()"></script>
+        <script src="~/Bundle/js/Global.min.js?@Version.GetVersion()"></script>
+        <script src="~/Bundle/js/Lib.min.js?@Version.GetVersion()"></script>
+
+    }
+
+</head>
+<body>
+
+    <div id="login">
+
+        <header></header>
+
+        <main>
+            <img style="margin-top: -18rem !important" src="~/Images/LogoVicunhaIdentity.png" alt="Vicunha JeansIdentity" />
+
+            <div class="login-container">
+
+                <div class="form-group">
+                    <label>Usuário</label>
+                    <div id="txtLogin" class="form-group"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Senha</label>
+                    <div id="txtPassword" class="form-group"></div>
+                </div>
+                <div style="margin-top:-15px !important; display: flex !important; justify-content: flex-end !important;">
+                    <a href="/Conta/Index?modo=2">Esqueci a minha Senha</a>
+                </div>
+
+
+                <div id="btnLogin" class="form-group login-btn"></div>
+
+                <div class="parent">
+                    <div class="left" style="justify-content: flex-start !important;">
+                        <a href="https://workspace.vicunha.com/manuais/portalrh/" target="_blank">Manual de Instruções</a>
+                    </div>
+                    <div class="right" style="justify-content: flex-end !important; text-align:right">
+                        <a href="/Conta/Index?modo=1">Primeiro acesso</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </main>
+        <footer>
+            <div class="ribbon">
+                <div class="blue-bar"></div>
+                <div class="yellow-bar"></div>
+                <div class="green-bar"></div>
+                <div class="orange-bar"></div>
+                <div class="light-blue-bar"></div>
+                <div class="purple-bar"></div>
+            </div>
+            <div class="info">
+                <div class="pull-right">
+                    <span>Versão: @Version.GetVersion()</span>
+                </div>
+                <div>
+                    <span>Copyright © @DateTime.Now.Year <a href="https://www.vicunha.com">Vicunha</a>. Todos os direitos reservados.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="loadPanel"></div>
+    <div id="message"></div>
+</body>
+</html>

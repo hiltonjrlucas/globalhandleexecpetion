@@ -1,0 +1,266 @@
+﻿@font-face {
+    font-family: 'Rawson';
+    src: url('Rawson-Regular.woff2') format('woff2'), url('Rawson-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Rawson Thin';
+    src: url('Rawson-Thin.woff2') format('woff2'), url('Rawson-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson Light';
+    src: url('Rawson-Light.woff2') format('woff2'), url('Rawson-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Rawson ExLight';
+    src: url('Rawson-ExtraLight.woff2') format('woff2'), url('Rawson-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson Med';
+    src: url('Rawson-Medium.woff2') format('woff2'), url('Rawson-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Rawson Bold';
+    src: url('Rawson-Bold.woff2') format('woff2'), url('Rawson-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson ExBold';
+    src: url('Rawson-ExtraBold.woff2') format('woff2'), url('Rawson-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson Black';
+    src: url('Rawson-Black.woff2') format('woff2'), url('Rawson-Black.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Rawson ExBlack';
+    src: url('Rawson-ExtraBlack.woff2') format('woff2'), url('Rawson-ExtraBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson SemiBold';
+    src: url('Rawson-SemiBold.woff2') format('woff2'), url('Rawson-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawson ThinIt';
+    src: url('Rawson-ThinIt.woff2') format('woff2'), url('Rawson-ThinIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Rawson BoldIt';
+    src: url('Rawson-BoldIt.woff2') format('woff2'), url('Rawson-BoldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson MediumIt';
+    src: url('Rawson-MediumIt.woff2') format('woff2'), url('Rawson-MediumIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson ExBlackIt';
+    src: url('Rawson-ExtraBlackIt.woff2') format('woff2'), url('Rawson-ExtraBlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson BlackIt';
+    src: url('Rawson-BlackIt.woff2') format('woff2'), url('Rawson-BlackIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson RegIt';
+    src: url('Rawson-RegularIt.woff2') format('woff2'), url('Rawson-RegularIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson ExLightIt';
+    src: url('Rawson-ExtraLightIt.woff2') format('woff2'), url('Rawson-ExtraLightIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson ExBoldIt';
+    src: url('Rawson-ExtraBoldIt.woff2') format('woff2'), url('Rawson-ExtraBoldIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson SemiBoldIt';
+    src: url('Rawson-SemiBoldIt.woff2') format('woff2'), url('Rawson-SemiBoldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rawson LightIt';
+    src: url('Rawson-LightIt.woff2') format('woff2'), url('Rawson-LightIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+.Rawson {
+    font-family: 'Rawson' !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Thin {
+    font-family: 'Rawson Thin' !important;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.Light {
+    font-family: 'Rawson Light' !important;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ExLight {
+    font-family: 'Rawson ExLight' !important;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.Med {
+    font-family: 'Rawson Med' !important;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Bold {
+    font-family: 'Rawson Bold' !important;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.ExBold {
+    font-family: 'Rawson ExBold' !important;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.Black {
+    font-family: 'Rawson Black' !important;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.ExBlack {
+    font-family: 'Rawson ExBlack' !important;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.SemiBold {
+    font-family: 'Rawson SemiBold' !important;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.ThinIt {
+    font-family: 'Rawson ThinIt' !important;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.BoldIt {
+    font-family: 'Rawson BoldIt' !important;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.MediumIt {
+    font-family: 'Rawson MediumIt' !important;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ExBlackIt {
+    font-family: 'Rawson ExBlackIt' !important;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.BlackIt {
+    font-family: 'Rawson BlackIt' !important;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.It {
+    font-family: 'Rawson RegIt' !important;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.ExLightIt {
+    font-family: 'Rawson ExLightIt' !important;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.ExBoldIt {
+    font-family: 'Rawson ExBoldIt' !important;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.SemiBoldIt {
+    font-family: 'Rawson SemiBoldIt' !important;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.LightIt {
+    font-family: 'Rawson LightIt' !important;
+    font-weight: 300;
+    font-style: italic;
+}
