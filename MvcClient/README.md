@@ -1,2 +1,0 @@
-# VicPortalRH.mvc
-
